@@ -313,7 +313,7 @@ public class EspProvisioningPlugin: CAPPlugin {
         }
     }
     
-    func authModeToString( _ authMode: Espressif_WifiAuthMode ) -> String {
+    func authModeToString( _ authMode: WifiAuthMode ) -> String {
         switch authMode {
         case .open:
             return "open"
@@ -327,6 +327,10 @@ public class EspProvisioningPlugin: CAPPlugin {
             return "wpawpa2psk"
         case .wpa2Enterprise:
             return "wpa2enterprise"
+        case .wpa3Psk:
+            return "wpa3psk"
+        case .wpa2Wpa3Psk:
+            return "wpa2wpa3psk"
         case .UNRECOGNIZED(let int):
             return "unrecognized:\(int)"
         }
